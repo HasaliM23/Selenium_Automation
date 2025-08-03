@@ -41,7 +41,7 @@ public class FullEntirePageSS {
         alertBox.click();
 
         // Wait for alert to appear visually
-        Thread.sleep(1000); // wait 1 second
+        Thread.sleep(2000); // wait 1 second
 
         Robot robot = new Robot();
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
