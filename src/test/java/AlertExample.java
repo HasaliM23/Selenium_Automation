@@ -1,3 +1,4 @@
+import Screenshots.CommonScrennShots;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -5,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import java.io.IOException;
 
 
 public class AlertExample {
@@ -21,7 +24,7 @@ public class AlertExample {
 
 
     @Test
-    public void alertTest() throws InterruptedException {
+    public void alertTest() throws InterruptedException, IOException {
         //Alert (Simple Dialog)
         WebElement alertBox = driver.findElement(By.id("j_idt88:j_idt91"));
         alertBox.click();
@@ -29,6 +32,8 @@ public class AlertExample {
         Thread.sleep(3000);
 
         alert.accept();
+
+        CommonScrennShots.takeWebPageScreenShot(driver,"AfterAlertClick");
 
 
         // Alert (Confirm Dialog)
